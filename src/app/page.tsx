@@ -75,7 +75,7 @@ export default function Home() {
   useEffect(() => {
     const intervalId = setInterval(() => {
       setRandomDeals(getRandomDeals(currentDeals, 2));
-    }, 1000); // Update the deals every 5 seconds
+    }, 5000); // Update the deals every 5 seconds
 
     return () => clearInterval(intervalId);
   }, []);
