@@ -14,7 +14,9 @@ const sampleDeals = [
     headline: 'Buy fruits up to ₹2000 to get 5% Off',
     description: 'Enjoy a diverse selection of fruits, ranging from grapes and watermelon to mango and beyond.',
     expirationDate: '2024-03-31',
-    address: 'VK Fruits, Kantharaj Urs road, Saraswathipuram, Mysore'
+    address: 'VK Fruits, Kantharaj Urs road, Saraswathipuram, Mysore',
+    lat: 12.295810,
+    lon: 76.639381
   },
   {
     id: '1',
@@ -22,7 +24,9 @@ const sampleDeals = [
     headline: 'LED TVs Up to 60% off',
     description: 'A secret Out of the Box sale is happening at a Croma store near you.',
     expirationDate: '2024-03-31',
-    address: 'Nearest Croma Store'
+    address: 'Nearest Croma Store',
+    lat: 12.295810,
+    lon: 76.639381
   },
   {
     id: '1',
@@ -30,7 +34,9 @@ const sampleDeals = [
     headline: 'Smartphones - Up to 45% off',
     description: 'A secret Out of the Box sale is happening at a Croma store near you.',
     expirationDate: '2024-03-31',
-    address: 'Nearest Croma Store'
+    address: 'Nearest Croma Store',
+    lat: 12.295810,
+    lon: 76.639381
   },
   {
     id: '1',
@@ -38,7 +44,9 @@ const sampleDeals = [
     headline: 'Laptops - Up to 40% off',
     description: 'A secret Out of the Box sale is happening at a Croma store near you.',
     expirationDate: '2024-03-31',
-    address: 'Nearest Croma Store'
+    address: 'Nearest Croma Store',
+    lat: 12.295810,
+    lon: 76.639381
   },
   {
     id: '1',
@@ -46,7 +54,9 @@ const sampleDeals = [
     headline: 'ACs - Up to 40% off',
     description: 'A secret Out of the Box sale is happening at a Croma store near you.',
     expirationDate: '2024-03-31',
-    address: 'Nearest Croma Store'
+    address: 'Nearest Croma Store',
+    lat: 12.295810,
+    lon: 76.639381
   },
   {
     id: '1',
@@ -54,14 +64,81 @@ const sampleDeals = [
     headline: 'Refrigerators - Up to 35% off',
     description: 'A secret Out of the Box sale is happening at a Croma store near you.',
     expirationDate: '2024-03-31',
-    address: 'Nearest Croma Store'
+    address: 'Nearest Croma Store',
+    lat: 12.295810,
+    lon: 76.639381
   },
 ];
 
+function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
+  // Haversine formula to calculate distance
+  const R = 6371; // Radius of the Earth in km
+  const dLat = (lat2 - lat1) * (Math.PI / 180);
+  const dLon = (lon2 - lon1) * (Math.PI / 180);
+  const a =
+    Math.sin(dLat / 2) * Math.sin(dLat / 2) +
+    Math.cos(lat1 * (Math.PI / 180)) * Math.cos(lat2 * (Math.PI / 180)) *
+    Math.sin(dLon / 2) * Math.sin(dLon / 2);
+  const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+  const d = R * c; // Distance in km
+  return d;
+}
+
+interface UserLocation {
+  lat: number;
+  lon: number;
+}
+
+interface Deal {
+  id: string;
+  shopName: string;
+  headline: string;
+  description: string;
+  expirationDate: string;
+  address: string;
+  lat: number;
+  lon: number;
+}
 
 export default function Home() {
-  // Assuming futureDeals is already filtered as shown previously
-  const currentDeals = sampleDeals.filter(deal => {
+
+  const [userLocation, setUserLocation] = useState<UserLocation | null>(null);
+  const [nearbyDeals, setNearbyDeals] = useState<Deal[]>([]);
+
+  useEffect(() => {
+    if (navigator.geolocation) {
+      navigator.geolocation.getCurrentPosition(
+        (position) => {
+          setUserLocation({
+            lat: position.coords.latitude,
+            lon: position.coords.longitude,
+          });
+        },
+        () => {
+        }
+      );
+    }
+  }, []);
+
+  useEffect(() => {
+    if (userLocation) {
+      const filteredDeals = sampleDeals.filter((deal) => {
+        const distance = calculateDistance(
+          userLocation.lat,
+          userLocation.lon,
+          deal.lat,
+          deal.lon // Corrected to 'lon' to match the Deal interface
+        );
+        // Filter deals within a certain radius
+        return distance <= 100;
+      });
+      setNearbyDeals(filteredDeals); // This should now work without type errors
+    } else {
+      setNearbyDeals(sampleDeals); // This is a simplistic approach
+    }
+  }, [userLocation]);
+
+  const currentDeals = nearbyDeals.filter(deal => {
     const today = new Date();
     const expirationDate = new Date(deal.expirationDate);
 
@@ -79,14 +156,13 @@ export default function Home() {
   };
 
   const [randomDeals, setRandomDeals] = useState(() => getRandomDeals(currentDeals, 2));
-
   useEffect(() => {
     const intervalId = setInterval(() => {
       setRandomDeals(getRandomDeals(currentDeals, 2));
     }, 5000); // Update the deals every 5 seconds
 
     return () => clearInterval(intervalId);
-  }, []);
+  }, [currentDeals]);
 
   return (
     <>
