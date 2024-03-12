@@ -6,8 +6,8 @@ import { Analytics } from '@vercel/analytics/react';
 
 const inter = Inter({ subsets: ['latin'] });
 export const metadata: Metadata = {
-  title: "Lokal Offers - Your Local Deals Directory",
-  description: "Find the best local deals and offers tailored just for you. Shop smart with LokalOffers!",
+  title: "Lokal Offers - Find the Best Local Deals",
+  description: "Discover amazing deals and offers near you with Lokal Offers. Save big on shopping, dining, and more.",
 };
 
 export default function RootLayout({

@@ -84,25 +84,32 @@ export default function Home() {
     <>
       <Head>
         <title>Lokal Offers - Find the Best Local Deals</title>
-        <meta name="description" content="Discover amazing deals and offers near you with LokalOffers. Save big on shopping, dining, and more." />
+        <meta name="description" content="Discover amazing deals and offers near you with Lokal Offers. Save big on shopping, dining, and more." />
         {/* Other SEO tags */}
       </Head>
       <Header />
       <main className="flex flex-col items-center justify-center p-6 container mx-auto">
-        <div className="flex flex-col md:flex-row items-center mb-8">
-          <div className="w-full md:w-1/4 md:mr-4 animate-fadeIn">
+        {/* First Row */}
+        <div className="grid grid-cols-3 gap-4 mb-8">
+          {/* First Column */}
+          <div className="w-full animate-fadeIn">
             {randomDeals[0] && <DealCard deal={randomDeals[0]} />}
           </div>
-          <div className="w-full md:w-1/2 flex flex-col items-center">
+
+          {/* Second Column */}
+          <div className="w-full flex flex-col items-center">
             <h2 className="text-2xl font-bold text-center mb-2">Your Hyper Local Deals</h2>
             <p className="text-lg text-center mb-4">Find the best deals near you!</p>
             <SearchBar />
           </div>
-          <div className="w-full md:w-1/4 md:ml-4 animate-fadeIn">
+
+          {/* Third Column */}
+          <div className="w-full animate-fadeIn">
             {randomDeals[1] && <DealCard deal={randomDeals[1]} />}
           </div>
         </div>
 
+        {/* Second Row */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
           {currentDeals.length > 0 ? (
             currentDeals.map((deal) => <DealCard key={deal.id} deal={deal} />)
@@ -111,6 +118,8 @@ export default function Home() {
           )}
         </div>
       </main>
+
+
       <Footer />
     </>
   );
