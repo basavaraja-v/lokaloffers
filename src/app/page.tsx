@@ -10,6 +10,14 @@ import SearchBar from '../components/SearchBar/SearchBar';
 const sampleDeals = [
   {
     id: '1',
+    shopName: 'VK Fruits',
+    headline: 'Buy fruits up to ₹2000 to get 5% Off',
+    description: 'Enjoy a diverse selection of fruits, ranging from grapes and watermelon to mango and beyond.',
+    expirationDate: '2024-03-31',
+    address: 'VK Fruits, Kantharaj Urs road, Saraswathipuram, Mysore'
+  },
+  {
+    id: '1',
     shopName: 'Croma',
     headline: 'LED TVs Up to 60% off',
     description: 'A secret Out of the Box sale is happening at a Croma store near you.',
