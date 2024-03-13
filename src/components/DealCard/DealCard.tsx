@@ -24,7 +24,7 @@ const DealCard: React.FC<DealCardProps> = ({ deal }) => {
     return (
         <div className="border border-gray-200 bg-white rounded-lg shadow-sm overflow-hidden hover:shadow-md transition-shadow">
             <Link href={`/deals/${deal.id}`} className="block p-4">
-                <h3 className="text-2xl font-bold mb-1">{deal.shopName}</h3>
+                <h3 className="text-2xl font-bold mb-1 dark:text-black">{deal.shopName}</h3>
                 <p className="font-semibold text-indigo-600 mb-2">{deal.headline}</p>
                 <p className="text-gray-700 text-sm mb-2">{deal.description}</p>
                 <p className="text-gray-700 text-sm mb-2">Address: {deal.address}</p>
