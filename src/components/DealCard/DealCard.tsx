@@ -28,7 +28,10 @@ const DealCard: React.FC<DealCardProps> = ({ deal }) => {
                 <p className="font-semibold text-indigo-600 mb-2">{deal.headline}</p>
                 <p className="text-gray-700 text-sm mb-2">{deal.description}</p>
                 <p className="text-gray-700 text-sm mb-2">Address: {deal.address}</p>
-                <p className='text-sm text-red-500'>Expires on {deal.expirationDate}</p>
+                <p className='text-sm text-red-500'>
+                    Expires on {deal.expirationDate.split('-').reverse().join('-')}
+                </p>
+
             </Link>
         </div>
     );

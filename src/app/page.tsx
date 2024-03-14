@@ -10,6 +10,46 @@ import SearchBar from '../components/SearchBar/SearchBar';
 const sampleDeals = [
   {
     id: '1',
+    shopName: 'Croma',
+    headline: 'UNLIMITED 5% off on Windows laptops above ₹50,000 Show code: CCLLAP58H2',
+    description: "Summer offers you just can't refuse! Use these special coupon code to get UNLIMITED 5% off on Windows laptops above ₹50,000",
+    expirationDate: '2024-03-31',
+    address: 'Nearest Croma Store',
+    lat: 12.295810,
+    lon: 76.639381
+  },
+  {
+    id: '1',
+    shopName: 'Croma',
+    headline: 'UNLIMITED 7% off on refrigerators Show code: CCLREF7N8I',
+    description: "Summer offers you just can't refuse! Use these special coupon code to get UNLIMITED 7% off on refrigerators",
+    expirationDate: '2024-03-31',
+    address: 'Nearest Croma Store',
+    lat: 12.295810,
+    lon: 76.639381
+  },
+  {
+    id: '1',
+    shopName: 'Croma',
+    headline: 'UNLIMITED 7% off on 2 or more split ACs Show code: CCLAC7D31',
+    description: "Summer offers you just can't refuse! Use these special coupon code to get UNLIMITED 7% off on 2 or more split ACs",
+    expirationDate: '2024-03-31',
+    address: 'Nearest Croma Store',
+    lat: 12.295810,
+    lon: 76.639381
+  },
+  {
+    id: '1',
+    shopName: 'Croma',
+    headline: 'UNLIMITED 5% off on 1 AC Show code: CCLAC54TK',
+    description: "Summer offers you just can't refuse! Use these special coupon code to get UNLIMITED 5% off on 1 AC",
+    expirationDate: '2024-03-31',
+    address: 'Nearest Croma Store',
+    lat: 12.295810,
+    lon: 76.639381
+  },
+  {
+    id: '1',
     shopName: 'VK Fruits',
     headline: 'Buy fruits up to ₹2000 to get 5% Off',
     description: 'Enjoy a diverse selection of fruits, ranging from grapes and watermelon to mango and beyond.',
