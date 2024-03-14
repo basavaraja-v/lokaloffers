@@ -194,8 +194,8 @@ export default function Home() {
 
         {/* First Row with Carousel */}
         <div className="w-full ">
-          <h2 className="text-2xl font-bold text-center mb-2">{heroTitle}</h2>
-          <p className="text-lg text-center mb-4">{heroDescription}</p>
+          <h2 className="text-2xl font-bold text-center mb-2 dark:text-black">{heroTitle}</h2>
+          <p className="text-lg text-center mb-4 dark:text-black">{heroDescription}</p>
           <Carousel
             autoPlay
             infiniteLoop
