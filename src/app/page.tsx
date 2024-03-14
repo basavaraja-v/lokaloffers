@@ -58,56 +58,7 @@ const sampleDeals = [
     lat: 12.295810,
     lon: 76.639381
   },
-  {
-    id: '1',
-    shopName: 'Croma',
-    headline: 'LED TVs Up to 60% off',
-    description: 'A secret Out of the Box sale is happening at a Croma store near you.',
-    expirationDate: '2024-03-31',
-    address: 'Nearest Croma Store',
-    lat: 12.295810,
-    lon: 76.639381
-  },
-  {
-    id: '1',
-    shopName: 'Croma',
-    headline: 'Smartphones - Up to 45% off',
-    description: 'A secret Out of the Box sale is happening at a Croma store near you.',
-    expirationDate: '2024-03-31',
-    address: 'Nearest Croma Store',
-    lat: 12.295810,
-    lon: 76.639381
-  },
-  {
-    id: '1',
-    shopName: 'Croma',
-    headline: 'Laptops - Up to 40% off',
-    description: 'A secret Out of the Box sale is happening at a Croma store near you.',
-    expirationDate: '2024-03-31',
-    address: 'Nearest Croma Store',
-    lat: 12.295810,
-    lon: 76.639381
-  },
-  {
-    id: '1',
-    shopName: 'Croma',
-    headline: 'ACs - Up to 40% off',
-    description: 'A secret Out of the Box sale is happening at a Croma store near you.',
-    expirationDate: '2024-03-31',
-    address: 'Nearest Croma Store',
-    lat: 12.295810,
-    lon: 76.639381
-  },
-  {
-    id: '1',
-    shopName: 'Croma',
-    headline: 'Refrigerators - Up to 35% off',
-    description: 'A secret Out of the Box sale is happening at a Croma store near you.',
-    expirationDate: '2024-03-31',
-    address: 'Nearest Croma Store',
-    lat: 12.295810,
-    lon: 76.639381
-  },
+
 ];
 
 function calculateDistance(lat1: number, lon1: number, lat2: number, lon2: number) {
