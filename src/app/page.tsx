@@ -190,7 +190,7 @@ export default function Home() {
         <meta name="description" content="Discover amazing deals and offers near you with Lokal Offers. Save big on shopping, dining, and more." />
       </Head>
       <Header />
-      <main className="flex flex-col items-center justify-center p-6 container mx-auto bg-gradient-to-r from-yellow-300 to-yellow-100">
+      <main className="flex flex-col items-center justify-center p-6 container mx-auto bg-gradient-to-r from-yellow-300 to-yellow-300">
 
         {/* First Row with Carousel */}
         <div className="w-full ">
