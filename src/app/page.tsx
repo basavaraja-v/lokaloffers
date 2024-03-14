@@ -11,7 +11,8 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const sampleDeals = [
   {
-    "shopName": "KSIC Mysore Silk",
+    id: 1,
+    shopName: "KSIC Mysore Silk",
     "headline": "Up to 20% off on Mysore Silk Sarees",
     "description": "Enjoy up to 20% off on Mysore Silk Sarees at KSIC Mysore Silk outlets across Karnataka and Chennai. Discover the newly printed Digital Silk sarees. High-quality pure natural silk and 100% pure gold zari that remains fresh over long periods.",
     "expirationDate": "2024-12-31",
@@ -20,7 +21,8 @@ const sampleDeals = [
     "lon": 76.6394
   },
   {
-    "shopName": "Central",
+    id: 1,
+    shopName: "Central",
     "headline": "Happiness Sale: Up to 51% Discount",
     "description": "Enjoy up to 51% discount on over 200 brands plus additional shopping vouchers on purchases at Central stores in Bengaluru. Terms & Conditions apply.",
     "expirationDate": "2024-03-31",
@@ -29,7 +31,8 @@ const sampleDeals = [
     "lon": 77.594566
   },
   {
-    "shopName": "Unlimited",
+    id: 1,
+    shopName: "Unlimited",
     "headline": "Fashionable Ugadi Sale: Items Start at Rs.149",
     "description": "Celebrate Ugadi with fashionable offers from Unlimited Stores in Bengaluru. Laptop Bag at Rs.149 and more on qualifying purchases. 5% Instant Discount with SBI Card.",
     "expirationDate": "2024-03-31",
@@ -38,7 +41,8 @@ const sampleDeals = [
     "lon": 77.594566
   },
   {
-    "shopName": "Lifestyle",
+    id: 1,
+    shopName: "Lifestyle",
     "headline": "Sale: Boat Airdopes at Rs.949",
     "description": "Get Boat Airdopes at Rs.949 on shopping of Rs.5,000 at Lifestyle Stores in Bengaluru. Also, avail Timex smart watch at a special price on shopping of Rs.10,000.",
     "expirationDate": "2024-03-25",
@@ -47,6 +51,7 @@ const sampleDeals = [
     "lon": 77.594566
   },
   {
+    id: 1,
     shopName: 'Croma',
     headline: 'UNLIMITED 5% off on Windows laptops above ₹50,000 Show code: CCLLAP58H2',
     description: "Summer offers you just can't refuse! Use these special coupon code to get UNLIMITED 5% off on Windows laptops above ₹50,000",
@@ -56,6 +61,7 @@ const sampleDeals = [
     lon: 76.639381
   },
   {
+    id: 1,
     shopName: 'Croma',
     headline: 'UNLIMITED 7% off on refrigerators Show code: CCLREF7N8I',
     description: "Summer offers you just can't refuse! Use these special coupon code to get UNLIMITED 7% off on refrigerators",
@@ -65,6 +71,7 @@ const sampleDeals = [
     lon: 76.639381
   },
   {
+    id: 1,
     shopName: 'Croma',
     headline: 'UNLIMITED 7% off on 2 or more split ACs Show code: CCLAC7D31',
     description: "Summer offers you just can't refuse! Use these special coupon code to get UNLIMITED 7% off on 2 or more split ACs",
@@ -74,6 +81,7 @@ const sampleDeals = [
     lon: 76.639381
   },
   {
+    id: 1,
     shopName: 'Croma',
     headline: 'UNLIMITED 5% off on 1 AC Show code: CCLAC54TK',
     description: "Summer offers you just can't refuse! Use these special coupon code to get UNLIMITED 5% off on 1 AC",
@@ -83,6 +91,7 @@ const sampleDeals = [
     lon: 76.639381
   },
   {
+    id: 1,
     shopName: 'VK Fruits',
     headline: 'Buy fruits up to ₹2000 to get 5% Off',
     description: 'Enjoy a diverse selection of fruits, ranging from grapes and watermelon to mango and beyond.',
@@ -114,6 +123,7 @@ interface UserLocation {
 }
 
 interface Deal {
+  id: number;
   shopName: string;
   headline: string;
   description: string;
