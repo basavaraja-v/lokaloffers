@@ -11,6 +11,60 @@ import 'react-responsive-carousel/lib/styles/carousel.min.css';
 
 const sampleDeals = [
   {
+    "shopName": "HSR BDA Block Factory Outlets",
+    "headline": "30% to 70% off on formal and semi-formal wear",
+    "description": "Offers formal and semi-formal wear for men with discounts ranging from offers such as 30% to 70%, Buy One, Get One Free, and flat 70% discounts.",
+    "expirationDate": "2024-03-31",
+    "address": "HSR, Bengaluru",
+    "lat": 12.9116,
+    "lon": 77.6389
+  },
+  {
+    "shopName": "Style Union",
+    "headline": "₹200 Off for Your First Order",
+    "description": "Style Union is the ultimate fashion destination in Mysore, offering distinctive seasonal collections for women, men, and kids. Specializing in an exquisite line of Indian fashion clothing, they cater to all occasions.",
+    "expirationDate": "2024-03-31",
+    "address": "Garuda Mall, Albert Victor Rd, Agrahara, Mandi Mohalla, Mysore, KA 570001",
+    "lat": 12.3096,
+    "lon": 76.6553
+  },
+  {
+    "shopName": "Westside",
+    "headline": "Exclusive offers with Club West card",
+    "description": "Westside offers cutting-edge fashion and lifestyle brands for men, women, and children. Benefit from their Club West card, an exclusive rewards program designed for customers.",
+    "expirationDate": "2024-03-31",
+    "address": "No 560, New Kantharaj Urs Road, Next To Karnataka Bank, Kuvempunagara North, Saraswathipuram, Mysore, KA 570023",
+    "lat": 12.3051,
+    "lon": 76.6550
+  },
+  {
+    "shopName": "Fashion Factory",
+    "headline": "20-70% Discount on Best Brands",
+    "description": "Fashion Factory is India’s leading chain of fashion discount stores offering 20-70% discounts. They cater to every fashion taste, from trendy western wear to elegant Indian looks.",
+    "expirationDate": "2024-03-31",
+    "address": "Fashion Factory, 7JWQ+6FJ, Ashoka Cir, Chamarajapura, Chamarajapuram Mohalla, Krishnamurthy Puram, Mysuru, Karnataka 570009",
+    "lat": 12.2958,
+    "lon": 76.6394
+  },
+  {
+    shopName: "Reliance Fashion Factory",
+    "headline": "Fashion 365 days - 20-70% Discount on Best Brands",
+    "description": " Enjoy year-round shopping with exciting deals at Reliance Fashion Factory. Offering a range of trendy western wear to elegant Indian looks and everything in between. Shop your favourite brands for less",
+    "expirationDate": "2024-03-31",
+    "address": "nearest store in Bengaluru",
+    "lat": 12.971599,
+    "lon": 77.594566
+  },
+  {
+    shopName: "Jayanagar Cloth Shop",
+    "headline": "Save 50% at Jayanagar Cloth Shop",
+    "description": "Jayanagar Cloth Shop offers a wide range of readymade garments suitable for any occasion without upsetting the budget. This offer allows you to save significantly on your purchases",
+    "expirationDate": "2024-03-31",
+    "address": "62, 10 Main Road, 4th Block, Jaya Nagar, Jaya Nagar, 4th T Block East, Jayanagar 3rd Block, Bangalore",
+    "lat": 12.971599,
+    "lon": 77.594566
+  },
+  {
     shopName: "KSIC Mysore Silk",
     "headline": "Up to 20% off on Mysore Silk Sarees",
     "description": "Enjoy up to 20% off on Mysore Silk Sarees at KSIC Mysore Silk outlets across Karnataka and Chennai. Discover the newly printed Digital Silk sarees. High-quality pure natural silk and 100% pure gold zari that remains fresh over long periods.",
